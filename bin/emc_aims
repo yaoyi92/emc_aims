@@ -248,7 +248,7 @@ def fd_effmass_st5(e, h):
     #
     return m
 
-def generate_kpoints(kpt_frac, st, h, prg, basis):
+def generate_kpoints(kpt_frac, st, h, basis):
     from math import pi
     #
     # working in the reciprocal space
@@ -258,8 +258,7 @@ def generate_kpoints(kpt_frac, st, h, prg, basis):
     kpt_rec = MAT_m_VEC(T(basis_r), kpt_frac)
     print('-> generate_kpoints: K-point in reciprocal coordinates: %5.3f %5.3f %5.3f' % (kpt_rec[0], kpt_rec[1], kpt_rec[2]))
     #
-    if prg == 'V' or prg == 'P':
-        h = h*(1/Bohr) # [1/A]
+    h = h*(1/Bohr) # [1/A]
     #
     kpoints = []
     for i in range(len(st)):
@@ -399,19 +398,13 @@ if __name__ == "__main__":
     else:
         print('No output file provided, entering the Generation regime...\n')
         #
-        if prg.upper() == "C" and band != 1:
-            print("    Band should be set to 1 for CRYSTAL calculations,")
-            print("    desired band number is set as a parameter (-b) for cry-getE.pl script.")
-            print("")
-            sys.exit(1)
-        #
         atoms = ase.io.read("geometry.in", format="aims")
         parameters = load_aims_parameters_json("aims.json")
         if "k_grid" in parameters and "d2k" in parameters["k_grid"]:
             den = float(parameters["k_grid"].split()[-1])
             parameters["k_grid"] = d2k(atoms, den)
 
-        kpoints = generate_kpoints(kpt, st, stepsize, prg, atoms.cell.tolist())
+        kpoints = generate_kpoints(kpt, st, stepsize, atoms.cell.tolist())
         bands = band_aimsinput(kpoints)
         parameters["output"] = bands
         calculator = Aims("",directory="./")
