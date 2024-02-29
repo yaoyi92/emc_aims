@@ -6,7 +6,7 @@ A modified version of EMC for it to work with FHI-aims.
 
 2. Install this package with `pip install .`
 
-3. Prepare inputs in a folder.
+3. Prepare inputs in a folder. (Please see the examples. We need three files `aims.json`, `INPCAR` , and `geometry.in`. For `INPCAR`, we only need 3 lines of input which is different than the original version of EMC)
 
 4. run `emc_aims INPCAR` in the folder to generate the inputs for FHI-aims.
 
