@@ -14,7 +14,7 @@ A modified version of EMC for it to work with FHI-aims.
 
 6. run `emc_aims INPCAR aims.out` in the folder to calculate the effective mass.
 
-Below is the original version of the README for ElasTool.
+Below is the original version of the README for EMC.
 
 
 
