@@ -1,0 +1,38 @@
+Effective mass calculator 1.51py
+Stencil: 3
+License: MIT
+Developed by: Alexandr Fonari and Chris Sutton
+FHI-aims adaptation. Yi Yao
+Started at: 2024-02-29 17:22
+
+Contents of the INPCAR file:
+
+0.000 0.000 0.000 # k-point at which eff. mass in reciprocal reduced coords (3 floats)
+0.01              # stepsize for finite difference (1 float) in Bohr
+257               # band for which eff. mass is computed (1 int)
+
+
+==========
+
+Successfully opened aims.out, preparing to parse it...
+
+-> fd_effmass_st3: Effective mass tensor:
+
+    35.88938833      0.00551240      0.00367493
+     0.00551240     35.88203846      0.00367493
+     0.00367493      0.00367493     35.88938833
+
+Principle effective masses and directions:
+
+Effective mass (0):        0.028
+Original eigenvectors: -0.40899 0.89662 -0.16970
+Normal fractional coordinates: -0.45615 1.00000 -0.18927
+
+Effective mass (1):        0.028
+Original eigenvectors: -0.61178 -0.13143 0.78003
+Normal fractional coordinates: -0.78430 -0.16849 1.00000
+
+Effective mass (2):        0.028
+Original eigenvectors: 0.67709 0.42285 0.60229
+Normal fractional coordinates: 1.00000 0.62450 0.88952
+
