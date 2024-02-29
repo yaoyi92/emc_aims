@@ -1,3 +1,23 @@
+# emc-aims
+
+A modified version of EMC for it to work with FHI-aims.
+
+1. Install at least ase-3.23.0b1. `pip install --upgrade git+https://gitlab.com/ase/ase.git@master`. Feb. 29. 2024.
+
+2. Install this package with `pip install .`
+
+3. Prepare inputs in a folder.
+
+4. run `emc_aims INPCAR` in the folder to generate the inputs for FHI-aims.
+
+5. run FHI-aims in the folder.
+
+6. run `emc_aims INPCAR aims.out` in the folder to calculate the effective mass.
+
+Below is the original version of the README for ElasTool.
+
+
+
 # Effective Mass Calculator for Semiconductors
 
 Effective mass calculator (**EMC**) implements calculation of the effective masses at the bands extrema using finite difference method (**not** the band fitting method). There are two versions of the program: written in FORTRAN and Python. Currently *CRYSTAL*, *VASP*, *CASTEP* are supported, *Quantum Espresso* is coming!
