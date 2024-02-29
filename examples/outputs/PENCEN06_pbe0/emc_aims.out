@@ -1,0 +1,24 @@
+Effective mass calculator 1.51py
+Stencil: 3
+License: MIT
+Developed by: Alexandr Fonari and Chris Sutton
+FHI-aims adaptation. Yi Yao
+Started at: 2024-02-29 18:08
+
+Contents of the INPCAR file:
+
+0.375 0.500 0.075 # k-point at which eff. mass in reciprocal reduced coords (3 floats)
+0.01              # stepsize for finite difference (1 float) in Bohr
+146               # band for which eff. mass is computed (1 int)
+
+
+==========
+
+No output file provided, entering the Generation regime...
+
+-> generate_kpoints: K-point in reciprocal coordinates: 0.374 0.374 -0.065
+
+control.in has been generated in the current directory...
+Please run aims in the current directory...
+Then run emc_aims again with emc_aims INPCAR aims.out
+
