@@ -12,6 +12,7 @@ urls = {Homepage = "https://github.com/yaoyi92/emc_aims"}
 dependencies = [
     "numpy",
     "scipy",
+    "spglib",
     "ase > 3.22.9",
 ]
 
