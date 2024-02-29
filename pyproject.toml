@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "emc_aims"
+version = "1.0"
+description = "Effective Mass Calculator for Semiconductors for FHI-aims"
+authors = [{name = "Yi Yao", email = "yaoyi92@gmail.com"}]
+license = {text = "MIT"}
+urls = {Homepage = "https://github.com/yaoyi92/emc_aims"}
+dependencies = [
+    "numpy",
+    "scipy",
+    "ase > 3.22.9",
+]
+
+[project.readme]
+file = "README.md"
+content-type = "text/markdown"
+
+[tool.setuptools]
+script-files = ["bin/emc_aims"]
+include-package-data = false
