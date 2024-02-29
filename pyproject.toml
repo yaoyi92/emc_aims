@@ -13,6 +13,7 @@ dependencies = [
     "numpy",
     "scipy",
     "spglib",
+    "monty",
     "ase > 3.22.9",
 ]
 
